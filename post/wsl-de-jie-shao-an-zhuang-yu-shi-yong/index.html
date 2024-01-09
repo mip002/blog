@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv='content-language' content='zh-CN'>
+<meta charset="utf-8"/>
+<meta name="description" content="Make Impossible Possible."/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta name="msvalidate.01" content="D7E47D3825149F7DCB15FFBEE8718512" />
+<meta name="baidu-site-verification" content="codeva-fQVNjVf6xI" />
+
+<title>WSL 的介绍、安装与使用  | mip001&#39;s Blog</title>
+
+<link rel="shortcut icon" href="https://mip001.top/favicon.ico?v=1704778000819">
+
+<!--<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">-->
+<link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="none" onload="this.media='all'">
+<link rel="stylesheet" href="https://mip001.top/styles/main.css">
+<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/4.5.3/css/bootstrap.min.css">
+<link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/10.7.3/styles/github.min.css" rel="stylesheet" media="none" onload="this.media='all'">
+
+
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/10.7.3/highlight.min.js"></script>
+
+<!--<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>-->
+
+<script async src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/moment.js/2.27.0/moment.min.js"></script>
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.5.1/jquery.slim.min.js"></script>
+<script async src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/1.16.0/umd/popper.min.js"></script>
+<script async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script async src="https://tongji.jdoi.top/random-string.js" data-website-id="03f14923-192c-4030-afe2-1d120430546a"></script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jziyhmj6ya");
+</script>
+    
+
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/KaTeX/0.15.2/katex.min.css" media="none" onload="this.media='all'">
+    <!--
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.0/mermaid.min.js"></script>
+<script>
+    var config = {
+        startOnLoad:true,
+        flowchart:{
+            useMaxWidth:false,
+            htmlLabels:true
+        }
+    };
+    mermaid.initialize(config);
+    $(function(){
+        var elements = document.getElementsByClassName("language-mermaid");
+        for (var i = elements.length; i--;) {
+            element = elements[i];
+            var graphDefinition = element.innerText;
+            if (graphDefinition) {
+                var svg = mermaid.render('ha_mermaid_' + i, graphDefinition, function(svg){});
+                if (svg) {
+                    var svgElement = document.createElement('div');
+                    preNode = element.parentNode;
+                    svgElement.innerHTML = svg;
+                    svgElement.setAttribute('class', 'mermaid');
+                    svgElement.setAttribute('data-processed', 'true');
+                    preNode.parentNode.replaceChild(svgElement, preNode);
+                }
+            }
+        }
+    });
+</script>
+    -->
+</head>
+
+<body>
+    <div class="main gt-bg-theme-color-first">
+        <nav class="navbar navbar-expand-lg">
+    <a href="/">
+        <div class="navbar-brand">
+            <img class="user-avatar" src="/favicon.ico" alt="头像">
+            <div class="site-name gt-c-content-color-first">
+                mip001&#39;s Blog
+            </div>
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav " style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/source" class="menu gt-a-link">
+                            资源
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1704778000819" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+        <div class="post-container">
+
+            <!-- <div class="post-detail gt-bg-theme-color-second"> -->
+            <article style="display:flex;">
+                <div class="post-detail gt-bg-theme-color-second gt-post-content">
+                    <h2 class="post-title">
+                        WSL 的介绍、安装与使用 
+                    </h2>
+                    <div class="post-info">
+                        <div>
+                            <time class="post-time gt-c-content-color-first">
+                                · 2023-02-04 ·
+                            </time>
+                            
+                            <a href="https://mip001.top/tag/guide/" class="post-tags">
+                                # 教程
+                            </a>
+                            
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- <div class="post-content-wrapper"> -->
+                    <div class="post-content">
+                        <p><strong>本文针对 OI 进行了专门优化，包括安装 Ubuntu 20.04 LTS（NOI Linux 2.0 便是基于此系统）、配置 G++ 环境等。</strong></p>
+<!-- more -->
+<h2 id="第一部分什么是-wsl">第一部分，什么是 WSL</h2>
+<p><strong>Windows Subsystem for Linux（适用于 Linux 的 Windows 子系统，简称 WSL）</strong></p>
+<p>WSL 可以让你在 Windows 上优雅地运行 GNU/Linux，包括大多数命令行工具、实用工具和应用程序， 不会产生传统虚拟机或双系统的庞大开销，且与 Windows 系统深度结合。</p>
+<h2 id="第二部分安装-windows-终端可选">第二部分，安装 Windows 终端（可选）</h2>
+<p><strong>强烈推荐！！！</strong></p>
+<p>使用 Windows 终端可以打开多个选项卡或窗口窗格，以显示多个 Linux 发行版或其他命令行（PowerShell、命令提示符、Azure CLI 等）并在它们之间快速切换。 可使用独特的配色方案、字体样式、大小、背景图像和自定义键盘快捷键来完全自定义终端。</p>
+<ol>
+<li>
+<p><a href="https://aka.ms/terminal">安装 Windows 终端（通过 Microsoft Store）</a></p>
+</li>
+<li>
+<p>设置默认终端应用程序（仅 Windows 11 支持）</p>
+<ul>
+<li>打开 Windows 终端并转到<strong>设置</strong> UI 窗口。</li>
+<li>选择<strong>启动</strong>并选择“Windows 终端”作为<strong>默认终端应用程序</strong>设置。</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://learn.microsoft.com/zh-cn/windows/terminal/images/settings-default-shell.png" alt="设置 UI 中 Windows 终端启动默认值的屏幕截图" loading="lazy"></figure>
+</li>
+</ol>
+<p>更多信息请参考 <a href="https://learn.microsoft.com/zh-cn/windows/terminal/install">这里</a></p>
+<h2 id="第三部分简易安装">第三部分，简易安装</h2>
+<p><strong>注意：此方法需要魔法。如果不知道怎么做或者出现了问题，建议移步第四部分。</strong></p>
+<h3 id="先决条件">先决条件</h3>
+<ul>
+<li>必须运行 Windows 10 版本 2004 及更高版本（内部版本 19041 及更高版本）或 Windows 11 才能使用以下命令。 如果使用的是更早的版本，请移步第四部分。</li>
+<li>仅在完全未安装 WSL 时才有效，否则请移步第四部分。</li>
+</ul>
+<h3 id="安装-wsl-命令">安装 WSL 命令</h3>
+<p>现在，可以使用单个命令安装运行 WSL 所需的一切内容。 在管理员模式下打开 PowerShell 或 Windows 命令提示符（“开始”菜单 &gt;“PowerShell” &gt;单击右键 &gt;“以管理员身份运行”），输入以下命令，然后重启计算机。</p>
+<pre><code class="language-powershell">wsl.exe --install Ubuntu-20.04
+</code></pre>
+<p>首次启动新安装的 Linux 发行版时，将打开一个控制台窗口，要求你等待将文件解压缩并存储到计算机上。 未来的所有启动时间应不到一秒。</p>
+<p>此部分的详细信息请参考 <a href="https://learn.microsoft.com/zh-cn/windows/wsl/install">这里</a>。</p>
+<h2 id="第四部分手动安装">第四部分，手动安装</h2>
+<p><strong>如果你完成了第三部分，请跳过此部分。</strong></p>
+<h3 id="先决条件-2">先决条件</h3>
+<p>需要运行 Windows 10。</p>
+<ul>
+<li>对于 x64 系统：版本 1903 或更高版本，内部版本为 18362 或更高版本。</li>
+</ul>
+<p>或 Windows 11。</p>
+<p>若不满足条件，请在浏览器地址栏中输入以下链接以更新到最新 Windows 版本</p>
+<pre><code>ms-settings:windowsupdate 
+</code></pre>
+<h3 id="一-启用适用于-linux-的-windows-子系统">一、启用适用于 Linux 的 Windows 子系统</h3>
+<p>需要先启用“适用于 Linux 的 Windows 子系统”可选功能，然后才能在 Windows 上安装 Linux 分发。</p>
+<p>以管理员身份打开 PowerShell（“开始”菜单 &gt;“PowerShell” &gt;单击右键 &gt;“以管理员身份运行”），然后输入以下命令：</p>
+<pre><code class="language-powershell">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre>
+<p>等待重新启动计算机，然后继续执行下一步。</p>
+<h3 id="二-启用虚拟机功能">二、启用虚拟机功能</h3>
+<p>以管理员身份打开 PowerShell 并运行：</p>
+<pre><code class="language-powershell">dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre>
+<p><strong>重新启动</strong>计算机，以完成 WSL 安装。</p>
+<h3 id="三-下载-linux-内核更新包">三、下载 Linux 内核更新包</h3>
+<p>下载最新包：</p>
+<ul>
+<li><a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">适用于 x64 计算机的 WSL2 Linux 内核更新包</a></li>
+<li>运行上一步中下载的更新包。 （双击以运行 - 系统将提示你提供提升的权限，选择“是”以批准此安装。）</li>
+</ul>
+<h3 id="四-设置-wsl-默认版本">四、设置 WSL 默认版本</h3>
+<p>打开 PowerShell 并运行：</p>
+<pre><code class="language-powershell">wsl --set-default-version 2
+</code></pre>
+<h3 id="五-使用-microsoft-store-安装-linux-分发版">五、使用 Microsoft Store 安装 Linux 分发版</h3>
+<p><strong>无法使用 Microsoft Store？请移步第六步</strong></p>
+<ol>
+<li>
+<p>单击此链接以打开 Ubuntu 20.04 LTS 的 Microsoft Store 页面：https://www.microsoft.com/store/apps/9n6svws3rx71</p>
+</li>
+<li>
+<p>在分发版的页面中，选择“获取”</p>
+<figure data-type="image" tabindex="2"><img src="https://learn.microsoft.com/zh-cn/windows/wsl/media/ubuntustore.png" alt="Linux distributions in the Microsoft store" loading="lazy"></figure>
+</li>
+</ol>
+<p>首次启动时，将打开一个控制台窗口，系统会要求你等待一分钟或两分钟，以便文件解压缩并存储到电脑上。 未来的所有启动时间应不到一秒。</p>
+<h3 id="六-下载发行版">六、下载发行版</h3>
+<p><strong>如果你已经完成了第五步，请跳过这一步。</strong></p>
+<p>如果 Microsoft Store 应用不可用，可使用以下链接来下载并手动安装 Ubuntu 20.04 LTS：https://aka.ms/wslubuntu2004</p>
+<p>Appx 包下载完成后，可以通过双击 appx 文件开始运行新发行版。</p>
+<h2 id="第五部分设置-linux-用户名和密码">第五部分，设置 Linux 用户名和密码</h2>
+<p>使用 WSL 安装 Ubuntu 20.04 LTS 的过程完成后，使用“开始”菜单打开 Ubuntu 20.04 LTS 。 系统将要求你为 Linux 发行版创建“用户名”和“密码”。</p>
+<ul>
+<li>此<strong>用户名</strong>和<strong>密码</strong>与 Windows 用户名无关。</li>
+<li>请注意，输入<strong>密码</strong>时，屏幕上不会显示任何内容。 这称为盲目键入。 不会看到正在键入的内容，这完全正常。</li>
+<li>创建<strong>用户名</strong>和<strong>密码</strong>后，该帐户将是分发版的默认用户，并将在启动时自动登录。</li>
+<li>此帐户将被视为 Linux 管理员，能够运行 <code>sudo</code> (Super User Do) 管理命令。</li>
+</ul>
+<h2 id="第六部分安装-g">第六部分，安装 G++</h2>
+<p>建议使用包管理器定期更新和升级包，使用以下命令：</p>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt upgrade
+</code></pre>
+<p>然后使用以下命令：</p>
+<pre><code class="language-bash">sudo apt-get install build-essential
+</code></pre>
+<h2 id="完结撒花">完结撒花 🌸</h2>
+<p>想要进一步折腾 WSL ？参考这里：<a href="https://learn.microsoft.com/zh-cn/windows/wsl/">适用于 Linux 的 Windows 子系统文档 | Microsoft Learn</a></p>
+
+                    </div>
+                    <div class="essaySuffix-box">
+                        
+                        <div class="essaySuffix-box-right"><span
+                                class="essaySuffix-right-title">本文作者</span>：<strong><span style="font-size: 12px;"><a
+                                        href="/post/about"
+                                        target="_blank">mip001</a></span></strong><br><span
+                                class="essaySuffix-right-title">版权声明</span>：本博客所有文章除特别声明外，均采用 <a
+                                href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" alt="CC BY-SA 4.0"
+                                title="CC BY-SA 4.0" target="_blank">CC BY-SA 4.0</a> 许可协议。转载请注明出处！</div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <!-- </div> 
+                <div class="toc-container">
+                    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E4%BB%80%E4%B9%88%E6%98%AF-wsl">第一部分，什么是 WSL</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%E5%AE%89%E8%A3%85-windows-%E7%BB%88%E7%AB%AF%E5%8F%AF%E9%80%89">第二部分，安装 Windows 终端（可选）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%E7%AE%80%E6%98%93%E5%AE%89%E8%A3%85">第三部分，简易安装</a>
+<ul>
+<li><a href="#%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6">先决条件</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85-wsl-%E5%91%BD%E4%BB%A4">安装 WSL 命令</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85">第四部分，手动安装</a>
+<ul>
+<li><a href="#%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6-2">先决条件</a></li>
+<li><a href="#%E4%B8%80-%E5%90%AF%E7%94%A8%E9%80%82%E7%94%A8%E4%BA%8E-linux-%E7%9A%84-windows-%E5%AD%90%E7%B3%BB%E7%BB%9F">一、启用适用于 Linux 的 Windows 子系统</a></li>
+<li><a href="#%E4%BA%8C-%E5%90%AF%E7%94%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%8A%9F%E8%83%BD">二、启用虚拟机功能</a></li>
+<li><a href="#%E4%B8%89-%E4%B8%8B%E8%BD%BD-linux-%E5%86%85%E6%A0%B8%E6%9B%B4%E6%96%B0%E5%8C%85">三、下载 Linux 内核更新包</a></li>
+<li><a href="#%E5%9B%9B-%E8%AE%BE%E7%BD%AE-wsl-%E9%BB%98%E8%AE%A4%E7%89%88%E6%9C%AC">四、设置 WSL 默认版本</a></li>
+<li><a href="#%E4%BA%94-%E4%BD%BF%E7%94%A8-microsoft-store-%E5%AE%89%E8%A3%85-linux-%E5%88%86%E5%8F%91%E7%89%88">五、使用 Microsoft Store 安装 Linux 分发版</a></li>
+<li><a href="#%E5%85%AD-%E4%B8%8B%E8%BD%BD%E5%8F%91%E8%A1%8C%E7%89%88">六、下载发行版</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86%E8%AE%BE%E7%BD%AE-linux-%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81">第五部分，设置 Linux 用户名和密码</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E9%83%A8%E5%88%86%E5%AE%89%E8%A3%85-g">第六部分，安装 G++</a></li>
+<li><a href="#%E5%AE%8C%E7%BB%93%E6%92%92%E8%8A%B1">完结撒花 🌸</a></li>
+</ul>
+</li>
+</ul>
+
+                </div>-->
+            </article>
+            <!-- </div> -->
+
+          
+
+            
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://mip001.top/post/shu-hua-countti-jie/" class="post-title gt-a-link">
+                    数花（count）题解
+                </a>
+            </div>
+            
+
+            
+
+            
+
+            <div class="site-footer gt-c-content-color-first">
+  <!--
+  <div class="social-container">
+    
+    <a href="" target="_blank" title="">
+      <i class="fab fa-github gt-c-content-color-first"></i>
+    </a>
+
+    <a href="" target="_blank" title="">
+      <i class="fas fa-blog gt-c-content-color-first"></i>
+    </a>
+
+    <a href="" target="_blank" title="">
+      <i class="fab fa-cuttlefish gt-c-content-color-first"></i>
+    </a>
+
+    <a href="mailto:" title="">
+      <i class="fas fa-envelope gt-c-content-color-first"></i>
+    </a>
+
+  </div>-->
+  <div class="slogan gt-c-content-color-first">Make Impossible Possible.</div>
+  <!---->
+  <div>
+    <div>
+      Theme by mip001, Powered by <a
+              href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://mip001.top/atom.xml" target="_blank">RSS</a></a>
+  </div>
+</div>
+
+<script>
+  //hljs.initHighlightingOnLoad()
+  hljs.highlightAll();
+</script>
+
+            <script>
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+  
+  if (mainNavLinks == null || mainNavLinks.length == 0) {
+    let tocContainer = document.querySelector(".toc-container");
+    tocContainer.classList.remove("toc-container")
+    // tocContainer.parentElement.firstElementChild.style.width = "100%"
+    console.log("隐藏大纲")
+  } else {
+
+    // This should probably be throttled.
+    // Especially because it triggers during smooth scrolling.
+    // https://lodash.com/docs/4.17.10#throttle
+    // You could do like...
+    // window.addEventListener("scroll", () => {
+    //    _.throttle(doThatStuff, 100);
+    // });
+    // Only not doing it here to keep this Pen dependency-free.
+
+
+    window.addEventListener("scroll", event => {
+      let fromTop = window.scrollY;
+
+      mainNavLinks.forEach((link, index) => {
+        let section = document.getElementById(decodeURI(link.hash).substring(1));
+        let nextSection = null
+        if (mainNavLinks[index + 1]) {
+          nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+        }
+        if (section.offsetTop <= fromTop) {
+          if (nextSection) {
+            if (nextSection.offsetTop > fromTop) {
+              link.classList.add("current");
+            } else {
+              link.classList.remove("current");
+            }
+          } else {
+            link.classList.add("current");
+          }
+        } else {
+          link.classList.remove("current");
+        }
+      });
+    });
+  }
+
+
+
+</script>
+
+<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="none" onload="this.media='all'" />
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<script>
+  let images = document.querySelectorAll("figure > img");
+  //   debugger
+  //   console.log("dddd: "+ images);
+  images.forEach(image => {
+    var parent = image.parentElement;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'gallery';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.appendChild(aelem);
+  })
+
+//   <a data-fancybox="gallery" href="big_1.jpg"><img src="small_1.jpg"></a>
+// <a data-fancybox="gallery" href="big_2.jpg"><img src="small_2.jpg"></a>
+</script>
+        </div>
+    </div>
+
+</body>
+
+</html>

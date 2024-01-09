@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv='content-language' content='zh-CN'>
+<meta charset="utf-8"/>
+<meta name="description" content="Make Impossible Possible."/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta name="msvalidate.01" content="D7E47D3825149F7DCB15FFBEE8718512" />
+<meta name="baidu-site-verification" content="codeva-fQVNjVf6xI" />
+
+<title>NOIP 2023 游记 | mip001&#39;s Blog</title>
+
+<link rel="shortcut icon" href="https://mip001.top/favicon.ico?v=1704778000819">
+
+<!--<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">-->
+<link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="none" onload="this.media='all'">
+<link rel="stylesheet" href="https://mip001.top/styles/main.css">
+<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/4.5.3/css/bootstrap.min.css">
+<link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/10.7.3/styles/github.min.css" rel="stylesheet" media="none" onload="this.media='all'">
+
+
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/10.7.3/highlight.min.js"></script>
+
+<!--<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>-->
+
+<script async src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/moment.js/2.27.0/moment.min.js"></script>
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.5.1/jquery.slim.min.js"></script>
+<script async src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/1.16.0/umd/popper.min.js"></script>
+<script async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script async src="https://tongji.jdoi.top/random-string.js" data-website-id="03f14923-192c-4030-afe2-1d120430546a"></script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jziyhmj6ya");
+</script>
+    
+
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/KaTeX/0.15.2/katex.min.css" media="none" onload="this.media='all'">
+    <!--
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.0/mermaid.min.js"></script>
+<script>
+    var config = {
+        startOnLoad:true,
+        flowchart:{
+            useMaxWidth:false,
+            htmlLabels:true
+        }
+    };
+    mermaid.initialize(config);
+    $(function(){
+        var elements = document.getElementsByClassName("language-mermaid");
+        for (var i = elements.length; i--;) {
+            element = elements[i];
+            var graphDefinition = element.innerText;
+            if (graphDefinition) {
+                var svg = mermaid.render('ha_mermaid_' + i, graphDefinition, function(svg){});
+                if (svg) {
+                    var svgElement = document.createElement('div');
+                    preNode = element.parentNode;
+                    svgElement.innerHTML = svg;
+                    svgElement.setAttribute('class', 'mermaid');
+                    svgElement.setAttribute('data-processed', 'true');
+                    preNode.parentNode.replaceChild(svgElement, preNode);
+                }
+            }
+        }
+    });
+</script>
+    -->
+</head>
+
+<body>
+    <div class="main gt-bg-theme-color-first">
+        <nav class="navbar navbar-expand-lg">
+    <a href="/">
+        <div class="navbar-brand">
+            <img class="user-avatar" src="/favicon.ico" alt="头像">
+            <div class="site-name gt-c-content-color-first">
+                mip001&#39;s Blog
+            </div>
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav " style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/source" class="menu gt-a-link">
+                            资源
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1704778000819" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+        <div class="post-container">
+
+            <!-- <div class="post-detail gt-bg-theme-color-second"> -->
+            <article style="display:flex;">
+                <div class="post-detail gt-bg-theme-color-second gt-post-content">
+                    <h2 class="post-title">
+                        NOIP 2023 游记
+                    </h2>
+                    <div class="post-info">
+                        <div>
+                            <time class="post-time gt-c-content-color-first">
+                                · 2023-11-18 ·
+                            </time>
+                            
+                            <a href="https://mip001.top/tag/travelogue/" class="post-tags">
+                                # 游记
+                            </a>
+                            
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- <div class="post-content-wrapper"> -->
+                    <div class="post-content">
+                        <p>前情提要：CSP 2023 死磕 T2 炸得很彻底，所以 NOIP 换了非常保守的比赛策略，不过这次感觉过于保守了，T3 和 T4 光顾着打暴力去了，如果能留出一些时间想正解的话 T3 或者 T4 应该能过掉一个。</p>
+<p>不太记得具体时间了，所以时间可能不太准确</p>
+<h4 id="828-~-835">8:28 ~ 8:35</h4>
+<p>配置各种环境，七中的电脑相当快，所以全程用的虚拟机</p>
+<p>赛前背了一堆编译选项方便调试，赛时才发现加了之后对程序运行效率的影响很大，这个后面再说。</p>
+<h4 id="835-~-930">8:35 ~ 9:30</h4>
+<p>T1 一开始写了个字典树，写完之后对着大样例调了 30min 才发觉不仅假了，空间还炸了，尝试挽救了一下发现不太行，心态有点炸，就先放着开后面的题。</p>
+<p>预估得分：80+0+0+0=80</p>
+<h4 id="930-~-950">9:30 ~ 9:50</h4>
+<p>通看了一下后面三道题，T2 第一想法就是扩展域并查集，但是马上就否掉了（赛后才知道这道题就是用扩展域并查集，难受啊）；T3 没啥想法；T4 是我一直不太擅长的 DP，又是最后一题，就没怎么想（没想到 T4 比 T3 简单啊，我以为 CSP 这么干了 NOIP 不至于再这样了）。</p>
+<h4 id="950-~-1040">9:50 ~ 10:40</h4>
+<p>下面的时间记忆很混乱，可能记录的时间极为不准确</p>
+<p>回来想 T2，否掉了扩展域并查集之后就一直没往那边想，于是没有悬念地干耗了二十分钟，因为制定的策略是二十分钟没有进展就打暴力，所以先写了 20 分基础档暴力，然后发现还有 20 分比较好拿，顺便也把打了，尝试再打另外 20 分，结果打完才发现假了，尝试修了一下也不对，只好作罢。</p>
+<p>预估得分：80+40+0+0=120</p>
+<h4 id="1040-~-1120">10:40 ~ 11:20</h4>
+<p>开 T3，上来先拼 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>m</mi><mi>q</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(nmq)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord mathdefault">m</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mclose">)</span></span></span></span> 暴力，这个时候脑子是晕的，写的依托答辩害得我调了半天，调完之后测大样例发现 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>≤</mo><mn>2000</mn></mrow><annotation encoding="application/x-tex">n\leq 2000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> 怎么跑了将近 3 秒，怎么想怎么不对，但又查不出来哪里不对，就先放着了。</p>
+<p>预估得分：80+40+25+0=145</p>
+<h4 id="1120-~-1210">11:20 ~ 12:10</h4>
+<p>去上了个厕所，回来再尝试修了一下 T2 的假做法，还是不行。就回过头去又看了眼 T1，然后就想到了正解（<s>可惜只能去一次厕所，不然多去几次岂不能拿更多分</s>），但码出来了发现极限数据怎么又跑了接近 3 秒，让我一度怀疑是不是又写假了。想了超级久终于想起来我加的那一大堆编译选项，全部删掉只保留了一个 O2 重新跑一次就只有 0.3 秒了，T3 的那个暴力同理。</p>
+<p>预估得分：100+40+35+0=175</p>
+<h4 id="1210-~-1250">12:10 ~ 12:50</h4>
+<p>时间来不及了，只好放弃 T4，打了一个 8 分基础档暴力。然后冲 T3 的特殊性质，然后就没有然后了，等有头绪的时候已经没时间了，最后四十分钟没拿分。</p>
+<p>预估得分：100+40+35+8=183</p>
+<hr>
+<p>感觉队线 300+，寄！</p>
+<p>总结：太菜了，应该会考虑 AFO 。</p>
+<hr>
+<p>upd 17:31</p>
+<p>T2 好像挂了 20，这下一等都悬了</p>
+
+                    </div>
+                    <div class="essaySuffix-box">
+                        
+                        <div class="essaySuffix-box-right"><span
+                                class="essaySuffix-right-title">本文作者</span>：<strong><span style="font-size: 12px;"><a
+                                        href="/post/about"
+                                        target="_blank">mip001</a></span></strong><br><span
+                                class="essaySuffix-right-title">版权声明</span>：本博客所有文章除特别声明外，均采用 <a
+                                href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" alt="CC BY-SA 4.0"
+                                title="CC BY-SA 4.0" target="_blank">CC BY-SA 4.0</a> 许可协议。转载请注明出处！</div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <!-- </div> 
+                <div class="toc-container">
+                    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#828-~-835">8:28 ~ 8:35</a></li>
+<li><a href="#835-~-930">8:35 ~ 9:30</a></li>
+<li><a href="#930-~-950">9:30 ~ 9:50</a></li>
+<li><a href="#950-~-1040">9:50 ~ 10:40</a></li>
+<li><a href="#1040-~-1120">10:40 ~ 11:20</a></li>
+<li><a href="#1120-~-1210">11:20 ~ 12:10</a></li>
+<li><a href="#1210-~-1250">12:10 ~ 12:50</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </div>-->
+            </article>
+            <!-- </div> -->
+
+          
+
+            
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://mip001.top/post/cf1106e-lunar-new-year-and-red-envelopes/" class="post-title gt-a-link">
+                    CF1106E Lunar New Year and Red Envelopes
+                </a>
+            </div>
+            
+
+            
+
+            
+
+            <div class="site-footer gt-c-content-color-first">
+  <!--
+  <div class="social-container">
+    
+    <a href="" target="_blank" title="">
+      <i class="fab fa-github gt-c-content-color-first"></i>
+    </a>
+
+    <a href="" target="_blank" title="">
+      <i class="fas fa-blog gt-c-content-color-first"></i>
+    </a>
+
+    <a href="" target="_blank" title="">
+      <i class="fab fa-cuttlefish gt-c-content-color-first"></i>
+    </a>
+
+    <a href="mailto:" title="">
+      <i class="fas fa-envelope gt-c-content-color-first"></i>
+    </a>
+
+  </div>-->
+  <div class="slogan gt-c-content-color-first">Make Impossible Possible.</div>
+  <!---->
+  <div>
+    <div>
+      Theme by mip001, Powered by <a
+              href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://mip001.top/atom.xml" target="_blank">RSS</a></a>
+  </div>
+</div>
+
+<script>
+  //hljs.initHighlightingOnLoad()
+  hljs.highlightAll();
+</script>
+
+            <script>
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+  
+  if (mainNavLinks == null || mainNavLinks.length == 0) {
+    let tocContainer = document.querySelector(".toc-container");
+    tocContainer.classList.remove("toc-container")
+    // tocContainer.parentElement.firstElementChild.style.width = "100%"
+    console.log("隐藏大纲")
+  } else {
+
+    // This should probably be throttled.
+    // Especially because it triggers during smooth scrolling.
+    // https://lodash.com/docs/4.17.10#throttle
+    // You could do like...
+    // window.addEventListener("scroll", () => {
+    //    _.throttle(doThatStuff, 100);
+    // });
+    // Only not doing it here to keep this Pen dependency-free.
+
+
+    window.addEventListener("scroll", event => {
+      let fromTop = window.scrollY;
+
+      mainNavLinks.forEach((link, index) => {
+        let section = document.getElementById(decodeURI(link.hash).substring(1));
+        let nextSection = null
+        if (mainNavLinks[index + 1]) {
+          nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+        }
+        if (section.offsetTop <= fromTop) {
+          if (nextSection) {
+            if (nextSection.offsetTop > fromTop) {
+              link.classList.add("current");
+            } else {
+              link.classList.remove("current");
+            }
+          } else {
+            link.classList.add("current");
+          }
+        } else {
+          link.classList.remove("current");
+        }
+      });
+    });
+  }
+
+
+
+</script>
+
+<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="none" onload="this.media='all'" />
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<script>
+  let images = document.querySelectorAll("figure > img");
+  //   debugger
+  //   console.log("dddd: "+ images);
+  images.forEach(image => {
+    var parent = image.parentElement;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'gallery';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.appendChild(aelem);
+  })
+
+//   <a data-fancybox="gallery" href="big_1.jpg"><img src="small_1.jpg"></a>
+// <a data-fancybox="gallery" href="big_2.jpg"><img src="small_2.jpg"></a>
+</script>
+        </div>
+    </div>
+
+</body>
+
+</html>
