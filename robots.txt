@@ -1,0 +1,5 @@
+user-agent: *
+Disallow: /post/noip2023/
+Disallow: /post/AFO/
+Disallow: /post/source/
+Disallow: /post/afo/

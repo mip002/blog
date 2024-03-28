@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv='content-language' content='zh-CN'>
+<meta charset="utf-8"/>
+<meta name="description" content="Make Impossible Possible."/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<meta name="msvalidate.01" content="D7E47D3825149F7DCB15FFBEE8718512" />
+<meta name="baidu-site-verification" content="codeva-fQVNjVf6xI" />
+
+<title>一些板子 | mip001&#39;s Blog</title>
+
+<link rel="shortcut icon" href="https://mip001.top/favicon.ico?v=1711620779504">
+
+<!--<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">-->
+<link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="none" onload="this.media='all'">
+<link rel="stylesheet" href="https://mip001.top/styles/main.css">
+<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/4.5.3/css/bootstrap.min.css">
+<link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/10.7.3/styles/github.min.css" rel="stylesheet" media="none" onload="this.media='all'">
+
+
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/10.7.3/highlight.min.js"></script>
+
+<!--<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>-->
+
+<script async src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/moment.js/2.27.0/moment.min.js"></script>
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.5.1/jquery.slim.min.js"></script>
+<script async src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/1.16.0/umd/popper.min.js"></script>
+<script async src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script async src="https://tongji.jdoi.top/random-string.js" data-website-id="03f14923-192c-4030-afe2-1d120430546a"></script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jziyhmj6ya");
+</script>
+    
+
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/KaTeX/0.15.2/katex.min.css" media="none" onload="this.media='all'">
+    <!--
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.0/mermaid.min.js"></script>
+<script>
+    var config = {
+        startOnLoad:true,
+        flowchart:{
+            useMaxWidth:false,
+            htmlLabels:true
+        }
+    };
+    mermaid.initialize(config);
+    $(function(){
+        var elements = document.getElementsByClassName("language-mermaid");
+        for (var i = elements.length; i--;) {
+            element = elements[i];
+            var graphDefinition = element.innerText;
+            if (graphDefinition) {
+                var svg = mermaid.render('ha_mermaid_' + i, graphDefinition, function(svg){});
+                if (svg) {
+                    var svgElement = document.createElement('div');
+                    preNode = element.parentNode;
+                    svgElement.innerHTML = svg;
+                    svgElement.setAttribute('class', 'mermaid');
+                    svgElement.setAttribute('data-processed', 'true');
+                    preNode.parentNode.replaceChild(svgElement, preNode);
+                }
+            }
+        }
+    });
+</script>
+    -->
+</head>
+
+<body>
+    <div class="main gt-bg-theme-color-first">
+        <nav class="navbar navbar-expand-lg">
+    <a href="/">
+        <div class="navbar-brand">
+            <img class="user-avatar" src="/favicon.ico" alt="头像">
+            <div class="site-name gt-c-content-color-first">
+                mip001&#39;s Blog
+            </div>
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav " style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/source" class="menu gt-a-link">
+                            资源
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1711620779504" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+        <div class="post-container">
+
+            <!-- <div class="post-detail gt-bg-theme-color-second"> -->
+            <article style="display:flex;">
+                <div class="post-detail gt-bg-theme-color-second gt-post-content">
+                    <h2 class="post-title">
+                        一些板子
+                    </h2>
+                    <div class="post-info">
+                        <div>
+                            <time class="post-time gt-c-content-color-first">
+                                · 2023-10-20 ·
+                            </time>
+                            
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- <div class="post-content-wrapper"> -->
+                    <div class="post-content">
+                        <p><s>我就是来水博客的</s></p>
+<hr>
+<h3 id="单调栈">单调栈</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int n,a;
+struct node{
+	int p,v;
+};
+stack&lt;node&gt; s;
+int f[3000001];
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin&gt;&gt;n;
+	memset(f,0,sizeof(f));
+	for(int i=1;i&lt;=n;i++)
+	{
+		cin&gt;&gt;a;
+		while(!s.empty()&amp;&amp;s.top().v&lt;a)
+		{
+			f[s.top().p]=i;
+			s.pop();
+		}
+		s.push({i,a});
+	}
+	for(int i=1;i&lt;=n;i++) cout&lt;&lt;f[i]&lt;&lt;&quot; &quot;;
+	return 0;
+}
+</code></pre>
+<h3 id="单调队列">单调队列</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+deque&lt;int&gt; q;
+int n,k,a[1000001];
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin&gt;&gt;n&gt;&gt;k;
+	for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];
+	for(int i=1;i&lt;=n;i++)
+	{
+		while(!q.empty()&amp;&amp;a[q.back()]&gt;=a[i]) q.pop_back();
+		q.push_back(i);
+		while(q.front()&lt;=i-k) q.pop_front();
+		if(i&gt;=k) cout&lt;&lt;a[q.front()]&lt;&lt;&quot; &quot;;
+	}
+	cout&lt;&lt;endl;
+	q.clear();
+	for(int i=1;i&lt;=n;i++)
+	{
+		while(!q.empty()&amp;&amp;a[q.back()]&lt;=a[i]) q.pop_back();
+		q.push_back(i);
+		while(q.front()&lt;=i-k) q.pop_front();
+		if(i&gt;=k) cout&lt;&lt;a[q.front()]&lt;&lt;&quot; &quot;;
+	}
+	return 0;
+}
+</code></pre>
+<h3 id="堆优先队列">堆/优先队列</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e6+5;
+int n;
+priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt;&gt; q;
+int main()
+{
+	//freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+	//freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+	ios::sync_with_stdio(false);
+	cin.tie(0),cout.tie(0);
+	cin&gt;&gt;n;
+	for(int i=1;i&lt;=n;i++)
+	{
+		int op,x;
+		cin&gt;&gt;op;
+		if(op==1)
+		{
+			cin&gt;&gt;x;
+			q.push(x);
+		}
+		else if(op==2) cout&lt;&lt;q.top()&lt;&lt;endl;
+		else q.pop();
+	}
+	return 0;
+}
+</code></pre>
+<h3 id="st-表">ST 表</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e5+5;
+int n,m;
+int st[maxn][31];
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;st[i][0];
+    for(int i=1;i&lt;=20;i++)
+    {
+        for(int j=1;j&lt;=n;j++)
+        {
+            if(j+(1&lt;&lt;(i-1))&gt;n) break;
+            st[j][i]=max(st[j][i-1],st[j+(1&lt;&lt;(i-1))][i-1]);
+        }
+    }
+    while(m--)
+    {
+        int l,r;
+        cin&gt;&gt;l&gt;&gt;r;
+        int len=log2(r-l+1);
+        cout&lt;&lt;max(st[l][len],st[r-(1&lt;&lt;len)+1][len])&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="并查集">并查集</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e4+5;
+int n,m;
+int fa[maxn];
+int findfa(int x)
+{
+    if(x!=fa[x]) return fa[x]=findfa(fa[x]);
+    else return x;
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;i++) fa[i]=i;
+    while(m--)
+    {
+        int opt,x,y;
+        cin&gt;&gt;opt&gt;&gt;x&gt;&gt;y;
+        if(opt==1) 
+        {
+            fa[findfa(x)]=findfa(y);
+        }
+        else 
+        {
+            int fx=findfa(x),fy=findfa(y);
+            if(fx==fy) cout&lt;&lt;&quot;Y&quot;&lt;&lt;endl;
+            else cout&lt;&lt;&quot;N&quot;&lt;&lt;endl;
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="树状数组">树状数组</h3>
+<h4 id="单点修改区间查询">单点修改，区间查询</h4>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=5e5+5;
+int n,m;
+int tree[maxn];
+int lowbit(int x) {return -x&amp;x;}
+void add(int x,int val)
+{
+    while(x&lt;=n)
+    {
+        tree[x]+=val;
+        x+=lowbit(x);
+    }
+}
+int query(int x)
+{
+    int res=0;
+    while(x)
+    {
+        res+=tree[x];
+        x-=lowbit(x);
+    }
+    return res;
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;i++)
+    {
+        int x;
+        cin&gt;&gt;x;
+        add(i,x);
+    }
+    while(m--)
+    {
+        int opt,x,k;
+        cin&gt;&gt;opt&gt;&gt;x&gt;&gt;k;
+        if(opt==1) add(x,k);
+        else cout&lt;&lt;query(k)-query(x-1)&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
+<h4 id="区间修改单点查询">区间修改，单点查询</h4>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=5e5+5;
+int n,m;
+int a[maxn],tree[maxn];
+int lowbit(int x) {return -x&amp;x;}
+void add(int x,int val)
+{
+    while(x&lt;=n)
+    {
+        tree[x]+=val;
+        x+=lowbit(x);
+    }
+}
+int query(int x)
+{
+    int res=0;
+    while(x)
+    {
+        res+=tree[x];
+        x-=lowbit(x);
+    }
+    return res;
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];
+    for(int i=n;i&gt;=1;i--) add(i,a[i]-a[i-1]);
+    while(m--)
+    {
+        int opt,x,y,k;
+        cin&gt;&gt;opt;
+        if(opt==1)
+        {
+            cin&gt;&gt;x&gt;&gt;y&gt;&gt;k;
+            add(x,k);
+            if(y&lt;n) add(y+1,-k);
+        }
+        else
+        {
+            cin&gt;&gt;x;
+            cout&lt;&lt;query(x)&lt;&lt;endl;
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="线段树">线段树</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e5+5;
+int n,m;
+ll a[maxn];
+ll tree[maxn&lt;&lt;2],tag[maxn&lt;&lt;2];
+void push_up(int x) {tree[x]=tree[2*x]+tree[2*x+1];}
+void build(int x,int l,int r)
+{
+    if(l==r)
+    {
+        tree[x]=a[l];
+        return;
+    }
+    int mid=(l+r)/2;
+    build(x*2,l,mid);
+    build(x*2+1,mid+1,r);
+    push_up(x);
+}
+void push_down(int x,int l,int r)
+{
+    int mid=(l+r)/2;
+    tag[x*2]+=tag[x];
+    tag[x*2+1]+=tag[x];
+    tree[x*2]+=tag[x]*(mid-l+1);
+    tree[x*2+1]+=tag[x]*(r-mid);
+    tag[x]=0;
+}
+void add(int x,int l,int r,int nl,int nr,ll val)
+{
+    if(l&gt;=nl&amp;&amp;r&lt;=nr) 
+    {
+        tree[x]+=val*(r-l+1);
+        tag[x]+=val;
+        return;
+    }
+    int mid=(l+r)/2;
+    push_down(x,l,r);
+    if(mid&gt;=nl) add(x*2,l,mid,nl,nr,val);
+    if(mid&lt;nr) add(x*2+1,mid+1,r,nl,nr,val);
+    push_up(x);
+}
+ll query(int x,int l,int r,int nl,int nr)
+{
+    if(l&gt;=nl&amp;&amp;r&lt;=nr) return tree[x];
+    int mid=(l+r)/2;
+    push_down(x,l,r);
+    ll res=0;
+    if(mid&gt;=nl) res+=query(x*2,l,mid,nl,nr);
+    if(mid&lt;nr) res+=query(x*2+1,mid+1,r,nl,nr);
+    push_up(x);
+    return res;
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];
+    build(1,1,n);
+    while(m--)
+    {
+        int opt,x,y,k;
+        cin&gt;&gt;opt;
+        if(opt==1)
+        {
+            cin&gt;&gt;x&gt;&gt;y&gt;&gt;k;
+            add(1,1,n,x,y,k);
+        }
+        else
+        {
+            cin&gt;&gt;x&gt;&gt;y;
+            cout&lt;&lt;query(1,1,n,x,y)&lt;&lt;endl;
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h4 id="线段树分裂合并">线段树分裂/合并</h4>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=2e5+5;
+int n,m;
+int a[maxn];
+ll tree[maxn&lt;&lt;5];
+int son[maxn&lt;&lt;5][2],rub[maxn&lt;&lt;2],cnt,top;
+int root[maxn&lt;&lt;2],tot;
+int new_node()
+{
+    if(top) return rub[top--];
+    return ++cnt;   
+}
+void del(int &amp;x) 
+{
+    tree[x]=son[x][0]=son[x][1]=0;
+    rub[++top]=x;
+    x=0;
+}
+void push_up(int x) {tree[x]=tree[son[x][0]]+tree[son[x][1]];}
+void build(int &amp;x,int l,int r)
+{
+    if(!x) x=new_node();
+    if(l==r)
+    {
+        tree[x]=a[l];
+        return;
+    }
+    int mid=(l+r)/2;
+    build(son[x][0],l,mid);
+    build(son[x][1],mid+1,r);
+    push_up(x);
+}
+void add(int &amp;x,int l,int r,int q,int val)
+{
+    if(!x) x=new_node();
+    if(l==r) 
+    {
+        tree[x]+=val;
+        return;
+    }
+    int mid=(l+r)/2;
+    if(mid&gt;=q) add(son[x][0],l,mid,q,val);
+    else add(son[x][1],mid+1,r,q,val);
+    push_up(x);
+}
+ll query(int x,int l,int r,int nl,int nr)
+{
+    if(l&gt;=nl&amp;&amp;r&lt;=nr) return tree[x];
+    int mid=(l+r)/2;
+    ll res=0;
+    if(mid&gt;=nl) res+=query(son[x][0],l,mid,nl,nr);
+    if(mid&lt;nr) res+=query(son[x][1],mid+1,r,nl,nr);
+    return res;
+}
+void split(int &amp;x,int &amp;y,int l,int r,int nl,int nr)
+{
+    if(!x) return;
+    if(l&gt;=nl&amp;&amp;r&lt;=nr)
+    {
+        y=x;
+        x=0;
+        return;
+    }
+    if(!y) y=new_node();
+    int mid=(l+r)/2;
+    if(mid&gt;=nl) split(son[x][0],son[y][0],l,mid,nl,nr);
+    if(mid&lt;nr) split(son[x][1],son[y][1],mid+1,r,nl,nr);
+    push_up(x),push_up(y);
+}
+int merge(int &amp;x,int &amp;y,int l,int r)
+{
+    if(!x||!y) return x+y;
+    if(l==r)
+    {
+        tree[x]+=tree[y];
+        del(y);
+        return x;
+    }
+    int mid=(l+r)/2;
+    son[x][0]=merge(son[x][0],son[y][0],l,mid);
+    son[x][1]=merge(son[x][1],son[y][1],mid+1,r);
+    push_up(x);
+    del(y);
+    return x;
+}
+int kth(int x,int l,int r,ll k)
+{
+    if(l==r) return l;
+    int mid=(l+r)/2;
+    if(k&lt;=tree[son[x][0]]) return kth(son[x][0],l,mid,k);
+    else return kth(son[x][1],mid+1,r,k-tree[son[x][0]]);
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];
+    build(root[++tot],1,n);
+    while(m--)
+    {
+        int opt,p,x,y;
+        cin&gt;&gt;opt;
+        if(opt==0)
+        {
+            cin&gt;&gt;p&gt;&gt;x&gt;&gt;y;
+            split(root[p],root[++tot],1,n,x,y);
+        }
+        else if(opt==1)
+        {
+            cin&gt;&gt;p&gt;&gt;x;
+            root[p]=merge(root[p],root[x],1,n);
+        }
+        else if(opt==2)
+        {
+            cin&gt;&gt;p&gt;&gt;x&gt;&gt;y;
+            add(root[p],1,n,y,x);
+        }
+        else if(opt==3)
+        {
+            cin&gt;&gt;p&gt;&gt;x&gt;&gt;y;
+            cout&lt;&lt;query(root[p],1,n,x,y)&lt;&lt;endl;
+        }
+        else 
+        {
+            cin&gt;&gt;p&gt;&gt;x;
+            if(tree[root[p]]&lt;x) cout&lt;&lt;-1&lt;&lt;endl;
+            else cout&lt;&lt;kth(root[p],1,n,x)&lt;&lt;endl;
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="字典树">字典树</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=3e6+5;
+int t,n,q;
+string s;
+int tree[maxn][65],cnt;
+int sum[maxn];
+int getnum(char ch)
+{
+    if(ch&gt;='0'&amp;&amp;ch&lt;='9') return ch-'0';
+    if(ch&gt;='A'&amp;&amp;ch&lt;='Z') return ch-'A'+10;
+    if(ch&gt;='a'&amp;&amp;ch&lt;='z') return ch-'a'+36;
+}
+void init()
+{
+    for(int i=0;i&lt;=cnt;i++)
+        for(int j=0;j&lt;=62;j++)
+            tree[i][j]=0;
+    for(int i=1;i&lt;=cnt;i++) sum[i]=0;
+    cnt=0;
+}
+void add(string s)
+{
+    int u=0;
+    for(int i=0;i&lt;s.size();i++)
+    {
+        int tmp=tree[u][getnum(s[i])];
+        if(!tmp)
+        {
+            tree[u][getnum(s[i])]=++cnt;
+            tmp=cnt;
+        }
+        sum[tmp]++;
+        u=tmp;
+    }
+}
+int query(string s)
+{
+    int u=0;
+    for(int i=0;i&lt;s.size();i++)
+    {
+        int tmp=tree[u][getnum(s[i])];
+        if(!tmp) return 0;
+        u=tmp;
+    }
+    return sum[u];
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;t;
+    while(t--)
+    {
+        init();
+        cin&gt;&gt;n&gt;&gt;q;
+        for(int i=1;i&lt;=n;i++)
+        {
+            cin&gt;&gt;s;
+            add(s);
+        }
+        while(q--)
+        {
+            cin&gt;&gt;s;
+            cout&lt;&lt;query(s)&lt;&lt;endl;
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="笛卡尔树">笛卡尔树</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e7+5;
+int n;
+int p[maxn];
+int son[maxn][2];
+int st[maxn],top;
+ll ans;
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n;
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;p[i];
+    for(int i=1;i&lt;=n;i++)
+    {
+        int tmp=top;
+        while(tmp&amp;&amp;p[st[tmp]]&gt;p[i]) --tmp;
+        if(tmp) son[st[tmp]][1]=i;
+        if(tmp&lt;top) son[i][0]=st[tmp+1];
+        st[++tmp]=i;
+        top=tmp;
+    }
+    for(int i=1;i&lt;=n;i++) ans^=1ll*i*(son[i][0]+1);
+    cout&lt;&lt;ans&lt;&lt;&quot; &quot;;
+    ans=0;
+    for(int i=1;i&lt;=n;i++) ans^=1ll*i*(son[i][1]+1);
+    cout&lt;&lt;ans&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<h3 id="fhq-treap">FHQ-Treap</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e5+5;
+int n;
+int son[maxn][2],val[maxn],pri[maxn],sze[maxn],cnt;
+int root;
+mt19937 rnd(time(0));
+
+int newnode(int x)
+{
+    sze[++cnt]=1;
+    pri[cnt]=rnd();
+    son[cnt][0]=son[cnt][1]=0;
+    val[cnt]=x;
+    return cnt;
+}
+
+void push_up(int u) {sze[u]=sze[son[u][0]]+sze[son[u][1]]+1;}
+
+void split(int u,int k,int &amp;x,int &amp;y)
+{
+    if(!u)
+    {
+        x=y=0;
+        return;
+    }
+    if(k&gt;=val[u])
+    {
+        x=u;
+        split(son[u][1],k,son[u][1],y);
+    }
+    else
+    {
+        y=u;
+        split(son[u][0],k,x,son[u][0]);
+    }
+    push_up(u);
+}
+
+int merge(int x,int y)
+{
+    if(!x||!y) return x+y;
+    if(pri[x]&gt;pri[y])
+    {
+        son[x][1]=merge(son[x][1],y);
+        push_up(x);
+        return x;
+    }
+    else
+    {
+        son[y][0]=merge(x,son[y][0]);
+        push_up(y);
+        return y;
+    }
+}
+
+int ranking(int u,int k)
+{
+    while(1)
+    {
+        if(sze[son[u][0]]&gt;=k) u=son[u][0];
+        else if(sze[son[u][0]]+1==k) return u;
+        else k-=sze[son[u][0]]+1,u=son[u][1];
+    }
+}
+
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n;
+    int x,y,z;
+    while(n--)
+    {
+        int opt,a;
+        cin&gt;&gt;opt&gt;&gt;a;
+        if(opt==1)
+        {
+            split(root,a,x,y);
+            root=merge(merge(x,newnode(a)),y);
+        }
+        else if(opt==2)
+        {
+            split(root,a,x,z);
+            split(x,a-1,x,y);
+            y=merge(son[y][0],son[y][1]);
+            root=merge(merge(x,y),z);
+        }
+        else if(opt==3)
+        {
+            split(root,a-1,x,y);
+            cout&lt;&lt;sze[x]+1&lt;&lt;endl;
+            root=merge(x,y);
+        }
+        else if(opt==4)
+        {
+            cout&lt;&lt;val[ranking(root,a)]&lt;&lt;endl;
+        }
+        else if(opt==5)
+        {
+            split(root,a-1,x,y);
+            cout&lt;&lt;val[ranking(x,sze[x])]&lt;&lt;endl;
+            root=merge(x,y);
+        }
+        else
+        {
+            split(root,a,x,y);
+            cout&lt;&lt;val[ranking(y,1)]&lt;&lt;endl;
+            root=merge(x,y);
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="kmp">KMP</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e6+5;
+string s1,s2;
+int nxt[maxn];
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;s1&gt;&gt;s2;
+    nxt[0]=-1;
+    int j=-1;
+    for(int i=1;i&lt;s2.size();i++)
+    {
+        nxt[i]=-1;
+        while(j!=-1&amp;&amp;s2[i]!=s2[j+1]) j=nxt[j];
+        if(s2[i]==s2[j+1]) ++j;
+        nxt[i]=j;
+    }
+    j=-1;
+    for(int i=0;i&lt;s1.size();i++)
+    {
+        while(j!=-1&amp;&amp;s1[i]!=s2[j+1]) j=nxt[j];
+        if(s1[i]==s2[j+1]) ++j;
+        if(j+1==s2.size())
+        {
+            cout&lt;&lt;i-j+1&lt;&lt;endl;
+            j=nxt[j];
+        }
+    }
+    for(int i=0;i&lt;s2.size();i++) cout&lt;&lt;nxt[i]+1&lt;&lt;&quot; &quot;;
+    cout&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<h3 id="prim">Prim</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+typedef pair&lt;int,int&gt; pii;
+const int maxn=5e3+5,maxm=2e5+5;
+int n,m;
+struct edge
+{
+    int v,w;
+};
+vector&lt;edge&gt; g[maxn]; 
+priority_queue&lt;pii,vector&lt;pii&gt;,greater&lt;pii&gt;&gt; q;
+int vis[maxn],dis[maxn];
+int num,ans;
+void prim()
+{
+    memset(dis,0x7f,sizeof(dis));
+    q.push({0,1});
+    dis[1]=0;
+    while(!q.empty()&amp;&amp;num&lt;n)
+    {
+        int u=q.top().second,d=q.top().first;
+        q.pop();
+        if(vis[u]) continue;
+        ++num;
+        ans+=d;
+        vis[u]=1;
+        for(auto x:g[u])
+        {
+            int v=x.v,w=x.w;
+            if(dis[v]&gt;w)
+            {
+                dis[v]=w;
+                q.push({w,v});
+            }
+        }
+    }
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=m;i++)
+    {
+        int u,v,w;
+        cin&gt;&gt;u&gt;&gt;v&gt;&gt;w;
+        g[u].push_back({v,w});
+        g[v].push_back({u,w});
+    }
+    prim();
+    if(num==n) cout&lt;&lt;ans&lt;&lt;endl;
+    else cout&lt;&lt;&quot;orz&quot;&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<h3 id="kruskal">Kruskal</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=5e3+5,maxm=2e5+5;
+int n,m;
+struct Edge
+{
+    int u,v,w;
+}edge[maxm];
+bool cmp(Edge x,Edge y) {return x.w&lt;y.w;}
+int fa[maxn];
+int findfa(int x)
+{
+    if(x!=fa[x]) return fa[x]=findfa(fa[x]);
+    return x;
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=n;i++) fa[i]=i;
+    for(int i=1;i&lt;=m;i++)
+    {
+        cin&gt;&gt;edge[i].u&gt;&gt;edge[i].v&gt;&gt;edge[i].w;
+    }
+    sort(edge+1,edge+1+m,cmp);
+    int num=0,ans=0;
+    for(int i=1;i&lt;=m;i++)
+    {
+        if(num==n-1) break;
+        int fx=findfa(edge[i].u),fy=findfa(edge[i].v);
+        if(fx==fy) continue;
+        fa[fx]=fy;
+        ++num;
+        ans+=edge[i].w;
+    }
+    if(num&lt;n-1) cout&lt;&lt;&quot;orz&quot;&lt;&lt;endl;
+    else cout&lt;&lt;ans&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<h3 id="spfa">SPFA</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e4+5;
+int n,m,s;
+struct edge
+{
+    int v,w;
+};
+vector&lt;edge&gt; g[maxn];
+int dis[maxn],cnt[maxn],vis[maxn];
+queue&lt;int&gt; q;
+void spfa()
+{
+    memset(dis,0x3f,sizeof(dis));
+    dis[s]=0;
+    q.push(s);
+    vis[s]=1;
+    while(!q.empty())
+    {
+        int u=q.front();
+        q.pop();
+        vis[u]=0;
+        for(auto x:g[u])
+        {
+            int v=x.v,w=x.w;
+            if(dis[v]&gt;dis[u]+w)
+            {
+                dis[v]=dis[u]+w;
+                cnt[v]=cnt[u]+1;
+                if(cnt[v]&gt;=n) return;
+                if(!vis[v])
+                {
+                    q.push(v);
+                    vis[v]=1;
+                }
+                
+            }
+        }
+    }
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
+    for(int i=1;i&lt;=m;i++)
+    {
+        int u,v,w;
+        cin&gt;&gt;u&gt;&gt;v&gt;&gt;w;
+        g[u].push_back({v,w});
+    }
+    spfa();
+    for(int i=1;i&lt;=n;i++) 
+    {
+        if(dis[i]==0x3f3f3f3f) cout&lt;&lt;(1&lt;&lt;30)-1+(1&lt;&lt;30)&lt;&lt;&quot; &quot;;
+        else cout&lt;&lt;dis[i]&lt;&lt;&quot; &quot;;
+    }
+    cout&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<h3 id="dijkstra">Dijkstra</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e5+5;
+int n,m,s;
+struct edge
+{
+    int v,w;
+};
+vector&lt;edge&gt; g[maxn];
+typedef pair&lt;int,int&gt; pii;
+priority_queue&lt;pii,vector&lt;pii&gt;,greater&lt;pii&gt;&gt; q;
+int dis[maxn],vis[maxn];
+
+void dijkstra()
+{
+    memset(dis,0x3f,sizeof(dis));
+    dis[s]=0;
+    q.push({0,s});
+    while(!q.empty())
+    {
+        int d=q.top().first,u=q.top().second;
+        q.pop();
+        if(vis[u]) continue;
+        vis[u]=1;
+        for(auto ed:g[u])
+        {
+            int v=ed.v,w=ed.w;
+            if(dis[v]&gt;dis[u]+w)
+            {
+                dis[v]=dis[u]+w;
+                q.push({dis[v],v});
+            }
+        }
+    }
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
+    for(int i=1;i&lt;=m;i++)
+    {
+        int u,v,w;
+        cin&gt;&gt;u&gt;&gt;v&gt;&gt;w;
+        g[u].push_back({v,w});
+    }
+    dijkstra();
+    for(int i=1;i&lt;=n;i++) cout&lt;&lt;dis[i]&lt;&lt;&quot; &quot;;
+    return 0;
+}
+</code></pre>
+<h3 id="强连通分量">强连通分量</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=5e4+5;
+int n,m;
+vector&lt;int&gt; g[maxn],ans[maxn];
+int tot;
+stack&lt;int&gt; st;
+int dfn[maxn],low[maxn],cnt;
+int vis[maxn];
+void tarjan(int u,int fa)
+{
+    dfn[u]=low[u]=++cnt;
+    st.push(u);
+    vis[u]=1;
+    for(int v:g[u])
+    {
+        if(!dfn[v]) 
+        {
+            tarjan(v,u);
+            low[u]=min(low[u],low[v]);
+        }
+        else if(vis[v]) low[u]=min(low[u],dfn[v]);
+    }
+    if(low[u]==dfn[u])
+    {
+        ++tot;
+        while(st.top()!=u)
+        {
+            ans[tot].push_back(st.top());
+            vis[st.top()]=0;
+            st.pop();
+        }
+        ans[tot].push_back(st.top());
+        vis[st.top()]=0;
+        st.pop();
+    }
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=m;i++)
+    {
+        int u,v;
+        cin&gt;&gt;u&gt;&gt;v;
+        g[u].push_back(v);
+    }
+    for(int i=1;i&lt;=n;i++) if(!dfn[i]) tarjan(i,0);
+    cout&lt;&lt;tot&lt;&lt;endl;
+    for(int i=1;i&lt;=tot;i++)
+    {
+        cout&lt;&lt;ans[i].size()&lt;&lt;&quot; &quot;;
+        for(int j:ans[i]) cout&lt;&lt;j&lt;&lt;&quot; &quot;;
+        cout&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="割点">割点</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=2e5+5;
+int n,m;
+vector&lt;int&gt; g[maxn];
+int dfn[maxn],low[maxn],cnt;
+int tot;
+vector&lt;int&gt; ans;
+stack&lt;int&gt; st;
+void tarjan(int u,int fa)
+{
+    dfn[u]=low[u]=++cnt;
+    st.push(u);
+    int son=0;
+    bool flag=false;
+    for(int v:g[u])
+    {
+        if(!dfn[v])
+        {
+            ++son;
+            tarjan(v,u);
+            low[u]=min(low[u],low[v]);
+            if(fa&amp;&amp;low[v]&gt;=dfn[u])
+            {
+                flag=true;
+                while(st.top()!=u) st.pop();
+            }
+        }
+        else if(v!=fa) low[u]=min(low[u],dfn[v]);
+    }
+    if(fa==0&amp;&amp;son&gt;1) flag=true;
+    if(flag) ++tot,ans.push_back(u);
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1;i&lt;=m;i++)
+    {
+        int u,v;
+        cin&gt;&gt;u&gt;&gt;v;
+        g[u].push_back(v);
+        g[v].push_back(u);
+    }
+    for(int i=1;i&lt;=n;i++) if(!dfn[i]) tarjan(i,0);
+    cout&lt;&lt;tot&lt;&lt;endl;
+    sort(ans.begin(),ans.end());
+    for(int i:ans) cout&lt;&lt;i&lt;&lt;&quot; &quot;;
+    cout&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<h3 id="树的直径">树的直径</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=1e4+5;
+int n;
+vector&lt;int&gt; g[maxn];
+int root,maxdepth;
+void dfs1(int u,int fa,int depth)
+{
+    if(maxdepth&lt;depth)
+    {
+        maxdepth=depth;
+        root=u;
+    }
+    for(int v:g[u])
+    {
+        if(v==fa) continue;
+        dfs1(v,u,depth+1);
+    }
+}
+void dfs2(int u,int fa,int depth)
+{
+    maxdepth=max(maxdepth,depth);
+    for(int v:g[u])
+    {
+        if(v==fa) continue;
+        dfs2(v,u,depth+1);
+    }
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n;
+    for(int i=1;i&lt;n;i++)
+    {
+        int u,v;
+        cin&gt;&gt;u&gt;&gt;v;
+        g[u].push_back(v);
+        g[v].push_back(u);
+    }
+    dfs1(1,0,1);
+    dfs2(root,0,1);
+    cout&lt;&lt;maxdepth-1&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<h3 id="树的重心">树的重心</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int n,u,v;
+int g[101][101],w[101];
+int main()
+{
+	ios::sync_with_stdio(false);
+	memset(g,0x3f3f3f3f,sizeof(g));
+	cin&gt;&gt;n;
+	for(int i=1;i&lt;=n;i++)
+	{
+		cin&gt;&gt;w[i]&gt;&gt;u&gt;&gt;v;
+		g[i][u]=g[u][i]=g[i][v]=g[v][i]=1;
+	}
+	for(int k=1;k&lt;=n;k++)
+	{
+		for(int i=1;i&lt;=n;i++)
+		{
+			for(int j=1;j&lt;=n;j++)
+			{
+				if(i!=k&amp;&amp;j!=k&amp;&amp;i!=j&amp;&amp;g[i][j]&gt;g[i][k]+g[k][j])
+				{
+					g[i][j]=g[i][k]+g[k][j];
+				}
+			}
+		}
+	}
+	int minn=0x3f3f3f3f;
+	for(int i=1;i&lt;=n;i++)
+	{
+		int sum=0;
+		for(int j=1;j&lt;=n;j++)
+		{
+			if(i!=j) sum+=g[i][j]*w[j];
+		}
+		if(sum&lt;minn) minn=sum;
+	}
+	cout&lt;&lt;minn&lt;&lt;endl;
+	return 0;
+}
+</code></pre>
+<h3 id="lca">LCA</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=5e5+5;
+int n,m,s;
+vector&lt;int&gt; g[maxn];
+int fa[maxn][25],depth[maxn];
+void dfs(int u,int father)
+{
+    fa[u][0]=father;
+    depth[u]=depth[father]+1;
+    for(int i=1;i&lt;=20;i++)
+    {
+        fa[u][i]=fa[fa[u][i-1]][i-1];
+    }
+    for(int v:g[u])
+    {
+        if(v==father) continue;
+        dfs(v,u);
+    }
+}
+int lca(int u,int v)
+{
+    if(depth[u]&lt;depth[v]) swap(u,v);
+    int tmp=depth[u]-depth[v];
+    for(int i=0;tmp;i++)
+    {
+        if(tmp&amp;1) u=fa[u][i];
+        tmp&gt;&gt;=1;
+    }
+    if(u==v) return u;
+    for(int i=20;i&gt;=0&amp;&amp;u!=v;i--)
+    {
+        if(fa[u][i]!=fa[v][i])
+        {
+            u=fa[u][i];
+            v=fa[v][i];
+        }
+    }
+    return fa[u][0];
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n&gt;&gt;m&gt;&gt;s;
+    for(int i=1;i&lt;n;i++)
+    {
+        int u,v;
+        cin&gt;&gt;u&gt;&gt;v;
+        g[u].push_back(v);
+        g[v].push_back(u);
+    }
+    dfs(s,0);
+    while(m--)
+    {
+        int u,v;
+        cin&gt;&gt;u&gt;&gt;v;
+        cout&lt;&lt;lca(u,v)&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre>
+<h3 id="crt">CRT</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=15;
+void exgcd(ll a,ll b,ll &amp;x,ll &amp;y)
+{
+    if(b==0)
+    {
+        x=1,y=0;
+        return;
+    }
+    exgcd(b,a%b,x,y);
+    int tmp=y;
+    y=x-(a/b)*y;
+    x=tmp;
+}
+ll n;
+ll a[maxn],b[maxn];
+ll mul=1,ans;
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;n;
+    for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i]&gt;&gt;b[i];
+    for(int i=1;i&lt;=n;i++) mul*=a[i];
+    for(int i=1;i&lt;=n;i++)
+    {
+        ll m=mul/a[i];
+        ll inv,y;
+        exgcd(m,a[i],inv,y);
+        ans=(ans+b[i]*m*inv%mul)%mul;
+    }
+    cout&lt;&lt;(ans+mul)%mul&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<h3 id="高斯消元">高斯消元</h3>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define endl &quot;\n&quot;
+typedef long long ll;
+const int maxn=105;
+int n;
+double a[maxn][maxn];
+bool guass()
+{
+    for(int i=1;i&lt;=n;i++)
+    {
+        int maxp=i;
+        for(int j=i+1;j&lt;=n;j++)
+        {
+            if(fabs(a[j][i])&gt;fabs(a[maxp][i])) maxp=j;
+        }
+        if(a[maxp][i]==0) return false;
+        swap(a[maxp],a[i]);
+        for(int j=1;j&lt;=n;j++)
+        {
+            if(j==i) continue;
+            double tmp=a[j][i]/a[i][i];
+            for(int k=i+1;k&lt;=n+1;k++) a[j][k]-=a[i][k]*tmp;
+        }
+    }
+    return true;
+}
+int main()
+{
+    //freopen(&quot;test.in&quot;,&quot;r&quot;,stdin);
+    //freopen(&quot;test.out&quot;,&quot;w&quot;,stdout);
+    scanf(&quot;%d&quot;,&amp;n);
+    for(int i=1;i&lt;=n;i++)
+    {
+        for(int j=1;j&lt;=n+1;j++)
+        {
+            scanf(&quot;%lf&quot;,&amp;a[i][j]);
+        }
+    }
+    if(!guass()) printf(&quot;No Solution\n&quot;);
+    else
+    {
+        for(int i=1;i&lt;=n;i++) printf(&quot;%.2lf\n&quot;,a[i][n+1]/a[i][i]);
+    }
+    return 0;
+}
+</code></pre>
+
+                    </div>
+                    <div class="essaySuffix-box">
+                        
+                        <div class="essaySuffix-box-right"><span
+                                class="essaySuffix-right-title">本文作者</span>：<strong><span style="font-size: 12px;"><a
+                                        href="/post/about"
+                                        target="_blank">mip001</a></span></strong><br><span
+                                class="essaySuffix-right-title">版权声明</span>：本博客所有文章除特别声明外，均采用 <a
+                                href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" alt="CC BY-SA 4.0"
+                                title="CC BY-SA 4.0" target="_blank">CC BY-SA 4.0</a> 许可协议。转载请注明出处！</div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+                <!-- </div> 
+                <div class="toc-container">
+                    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E5%8D%95%E8%B0%83%E6%A0%88">单调栈</a></li>
+<li><a href="#%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97">单调队列</a></li>
+<li><a href="#%E5%A0%86%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97">堆/优先队列</a></li>
+<li><a href="#st-%E8%A1%A8">ST 表</a></li>
+<li><a href="#%E5%B9%B6%E6%9F%A5%E9%9B%86">并查集</a></li>
+<li><a href="#%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84">树状数组</a>
+<ul>
+<li><a href="#%E5%8D%95%E7%82%B9%E4%BF%AE%E6%94%B9%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2">单点修改，区间查询</a></li>
+<li><a href="#%E5%8C%BA%E9%97%B4%E4%BF%AE%E6%94%B9%E5%8D%95%E7%82%B9%E6%9F%A5%E8%AF%A2">区间修改，单点查询</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BA%BF%E6%AE%B5%E6%A0%91">线段树</a>
+<ul>
+<li><a href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%88%86%E8%A3%82%E5%90%88%E5%B9%B6">线段树分裂/合并</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AD%97%E5%85%B8%E6%A0%91">字典树</a></li>
+<li><a href="#%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91">笛卡尔树</a></li>
+<li><a href="#fhq-treap">FHQ-Treap</a></li>
+<li><a href="#kmp">KMP</a></li>
+<li><a href="#prim">Prim</a></li>
+<li><a href="#kruskal">Kruskal</a></li>
+<li><a href="#spfa">SPFA</a></li>
+<li><a href="#dijkstra">Dijkstra</a></li>
+<li><a href="#%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F">强连通分量</a></li>
+<li><a href="#%E5%89%B2%E7%82%B9">割点</a></li>
+<li><a href="#%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84">树的直径</a></li>
+<li><a href="#%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83">树的重心</a></li>
+<li><a href="#lca">LCA</a></li>
+<li><a href="#crt">CRT</a></li>
+<li><a href="#%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83">高斯消元</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </div>-->
+            </article>
+            <!-- </div> -->
+
+          
+
+            
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://mip001.top/post/2023-shu-jia-ji-xun-mo-ni-sai-ti-jie-ji/" class="post-title gt-a-link">
+                    2023 暑假集训模拟赛题解集
+                </a>
+            </div>
+            
+
+            
+
+            
+
+            <div class="site-footer gt-c-content-color-first">
+  <!--
+  <div class="social-container">
+    
+    <a href="" target="_blank" title="">
+      <i class="fab fa-github gt-c-content-color-first"></i>
+    </a>
+
+    <a href="" target="_blank" title="">
+      <i class="fas fa-blog gt-c-content-color-first"></i>
+    </a>
+
+    <a href="" target="_blank" title="">
+      <i class="fab fa-cuttlefish gt-c-content-color-first"></i>
+    </a>
+
+    <a href="mailto:" title="">
+      <i class="fas fa-envelope gt-c-content-color-first"></i>
+    </a>
+
+  </div>-->
+  <div class="slogan gt-c-content-color-first">Make Impossible Possible.</div>
+  <!---->
+  <div>
+    <div>
+      Theme by mip001, Powered by <a
+              href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://mip001.top/atom.xml" target="_blank">RSS</a></a>
+  </div>
+</div>
+
+<script>
+  //hljs.initHighlightingOnLoad()
+  hljs.highlightAll();
+</script>
+
+            <script>
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+  
+  if (mainNavLinks == null || mainNavLinks.length == 0) {
+    let tocContainer = document.querySelector(".toc-container");
+    tocContainer.classList.remove("toc-container")
+    // tocContainer.parentElement.firstElementChild.style.width = "100%"
+    console.log("隐藏大纲")
+  } else {
+
+    // This should probably be throttled.
+    // Especially because it triggers during smooth scrolling.
+    // https://lodash.com/docs/4.17.10#throttle
+    // You could do like...
+    // window.addEventListener("scroll", () => {
+    //    _.throttle(doThatStuff, 100);
+    // });
+    // Only not doing it here to keep this Pen dependency-free.
+
+
+    window.addEventListener("scroll", event => {
+      let fromTop = window.scrollY;
+
+      mainNavLinks.forEach((link, index) => {
+        let section = document.getElementById(decodeURI(link.hash).substring(1));
+        let nextSection = null
+        if (mainNavLinks[index + 1]) {
+          nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+        }
+        if (section.offsetTop <= fromTop) {
+          if (nextSection) {
+            if (nextSection.offsetTop > fromTop) {
+              link.classList.add("current");
+            } else {
+              link.classList.remove("current");
+            }
+          } else {
+            link.classList.add("current");
+          }
+        } else {
+          link.classList.remove("current");
+        }
+      });
+    });
+  }
+
+
+
+</script>
+
+<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="none" onload="this.media='all'" />
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<script>
+  let images = document.querySelectorAll("figure > img");
+  //   debugger
+  //   console.log("dddd: "+ images);
+  images.forEach(image => {
+    var parent = image.parentElement;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'gallery';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.appendChild(aelem);
+  })
+
+//   <a data-fancybox="gallery" href="big_1.jpg"><img src="small_1.jpg"></a>
+// <a data-fancybox="gallery" href="big_2.jpg"><img src="small_2.jpg"></a>
+</script>
+        </div>
+    </div>
+
+</body>
+
+</html>
