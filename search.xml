@@ -3226,6 +3226,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
         <tag>题解</tag>
         <tag>OI</tag>
         <tag>动态规划</tag>
+        <tag>线段树</tag>
       </tags>
   </entry>
   <entry>
@@ -3411,6 +3412,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
       <tags>
         <tag>题解</tag>
         <tag>OI</tag>
+        <tag>线段树</tag>
       </tags>
   </entry>
   <entry>
@@ -3694,6 +3696,7 @@ A(\omega_n^{m + k})~&amp;=~A_0((\omega_n^{m + k})^2) + \omega_n^{m + k} A_1((\om
         <tag>OI</tag>
         <tag>笔记</tag>
         <tag>数学</tag>
+        <tag>多项式</tag>
       </tags>
   </entry>
   <entry>
@@ -4009,6 +4012,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
         <tag>OI</tag>
         <tag>笔记</tag>
         <tag>数学</tag>
+        <tag>数论</tag>
       </tags>
   </entry>
   <entry>
@@ -4237,6 +4241,7 @@ S_n+a_{n+1}&amp;=\sum\limits_{0\leq k\leq n+1} a_k\\
         <tag>OI</tag>
         <tag>笔记</tag>
         <tag>数学</tag>
+        <tag>具体数学</tag>
       </tags>
   </entry>
   <entry>
@@ -4339,6 +4344,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
       <tags>
         <tag>OI</tag>
         <tag>笔记</tag>
+        <tag>莫队</tag>
       </tags>
   </entry>
   <entry>
@@ -4522,6 +4528,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
         <tag>OI</tag>
         <tag>笔记</tag>
         <tag>数学</tag>
+        <tag>组合计数</tag>
       </tags>
   </entry>
   <entry>
@@ -4653,7 +4660,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
       <tags>
         <tag>OI</tag>
         <tag>笔记</tag>
-        <tag>数学</tag>
+        <tag>图论</tag>
       </tags>
   </entry>
   <entry>
@@ -4679,6 +4686,7 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
       <tags>
         <tag>题解</tag>
         <tag>OI</tag>
+        <tag>整体二分</tag>
       </tags>
   </entry>
   <entry>
