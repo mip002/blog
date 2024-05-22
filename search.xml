@@ -253,12 +253,15 @@ If only I could go back when I was me<br />
 <p>心态怎么会这么差呢？再这样下去感觉会影响到文化课了。</p>
 <p>机房即将大换血，不过准确来说应该是大输血，因为之前只有几个人。这几天给所有空机位都重装了系统，环境也都配得差不多了，新人进来应该会有不错的体验。</p>
 <h2 id="week-12"><a class="markdownIt-Anchor" href="#week-12"></a> Week 12</h2>
-<h4 id="2024518"><a class="markdownIt-Anchor" href="#2024518"></a> 2024/5/18</h4>
-<p>这周好忙，都搞忘写了。那就不写了。</p>
-<p>把博客从 Gridea 迁移到了 Hexo，看顺眼多了，原先的博客没有目录，遇到长博客就很折磨人。这下也有了暗黑模式，终于不会把我眼睛亮瞎了。</p>
+<h3 id="2024518"><a class="markdownIt-Anchor" href="#2024518"></a> 2024/5/18</h3>
+<p>这周好忙，都搞忘写了。那就不写了（</p>
+<p>把博客从 Gridea 迁移到了 Hexo，看顺眼多了，原先的博客没有目录，遇到长博客就很折磨人。这下也有了暗黑模式，终于不会把我眼睛亮瞎了。唯一的缺点就是更博客没那么方便了，还得打开 WSL 手动敲几个命令。我电脑最近又抽风，开个 WSL 要开半天，懒得修。</p>
 <h2 id="week-13"><a class="markdownIt-Anchor" href="#week-13"></a> Week 13</h2>
-<h4 id="2024520"><a class="markdownIt-Anchor" href="#2024520"></a> 2024/5/20</h4>
+<h3 id="2024520"><a class="markdownIt-Anchor" href="#2024520"></a> 2024/5/20</h3>
 <p>最近的事情等一切都尘埃落定了再写，免得打脸。</p>
+<h3 id="2024522"><a class="markdownIt-Anchor" href="#2024522"></a> 2024/5/22</h3>
+<p>现在又完全离开了课堂，到机房自己学了。这样子做肯定有利有弊，但是各方面权衡下来我还是决定试一试，通过期末考试的成绩来判断这样是否合适。</p>
+<p>今天是正式请到假的第一天，所有计划都还在尝试中，初步定型可能得到下周。我仍然不会在这里列出我的计划，不过也许可以把每天学的东西列得更详细一点。</p>
 ]]></content>
       <tags>
         <tag>杂文</tag>
@@ -3231,8 +3234,8 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 ]]></content>
       <tags>
         <tag>题解</tag>
-        <tag>OI</tag>
         <tag>动态规划</tag>
+        <tag>OI</tag>
         <tag>线段树</tag>
       </tags>
   </entry>
@@ -3442,8 +3445,8 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 ]]></content>
       <tags>
         <tag>题解</tag>
-        <tag>OI</tag>
         <tag>动态规划</tag>
+        <tag>OI</tag>
       </tags>
   </entry>
   <entry>
@@ -3502,8 +3505,8 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 ]]></content>
       <tags>
         <tag>题解</tag>
-        <tag>OI</tag>
         <tag>动态规划</tag>
+        <tag>OI</tag>
       </tags>
   </entry>
   <entry>
@@ -4390,8 +4393,8 @@ M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">�
 ]]></content>
       <tags>
         <tag>题解</tag>
-        <tag>OI</tag>
         <tag>动态规划</tag>
+        <tag>OI</tag>
       </tags>
   </entry>
   <entry>
